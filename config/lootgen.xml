@@ -53,7 +53,7 @@
         <goods_entry level="5" upper_roll="100" num_sides="4" num_dice="1" goods_type="ART" />
         
         <gems>
-            <gem upper_roll="25" val_num_sides="10" val_num_dice="1" val_modifier="10">
+            <gem upper_roll="25" num_sides="10" num_dice="1" modifier="10">
                 <name value="Banded agate" />
                 <name value="Eye agate" />
                 <name value="Moss agate" />
@@ -66,7 +66,7 @@
                 <name value="Tiger eye turqoise" />
                 <name value="Freshwater (irregular) pearl" />
             </gem>
-            <gem upper_roll="50" val_num_sides="4" val_num_dice="2" val_modifier="10">
+            <gem upper_roll="50" num_sides="4" num_dice="2" modifier="10">
                 <name value="Bloodstone" />
                 <name value="Carnelian" />
                 <name value="Chalcedony" />
@@ -82,7 +82,7 @@
                 <name value="Smokey quartz" />
                 <name value="Star rose quartz" />
             </gem>
-            <gem upper_roll="70" val_num_sides="4" val_num_dice="4" val_modifier="10">
+            <gem upper_roll="70" num_sides="4" num_dice="4" modifier="10">
                 <name value="Amber"/>
                 <name value="Amethyst"/>
                 <name value="Chrysoberyl"/>
@@ -100,7 +100,7 @@
                 <name value="Deep green spinel"/>
                 <name value="Tourmaline"/>
             </gem>
-            <gem upper_roll="99" val_num_sides="4" val_num_dice="2" val_modifier="100">
+            <gem upper_roll="99" num_sides="4" num_dice="2" modifier="100">
                <name value="Alexandrite"/>
                 <name value="Aquamarine"/>
                 <name value="Violet garnet"/>
@@ -108,7 +108,7 @@
                 <name value="Deep blue spinel"/>
                 <name value="Golden yellow topaz"/>
             </gem>
-            <gem upper_roll="99" val_num_sides="4" val_num_dice="4" val_modifier="100">
+            <gem upper_roll="99" num_sides="4" num_dice="4" modifier="100">
                 <name value="Emerald"/>
                 <name value="White opal"/>
                 <name value="Black opal"/>
@@ -120,7 +120,7 @@
                 <name value="Black star sapphire"/>
                 <name value="Star ruby"/>
             </gem>
-            <gem upper_roll="100" val_num_sides="4" val_num_dice="2" val_modifier="1000">
+            <gem upper_roll="100" num_sides="4" num_dice="2" modifier="1000">
                 <name value="Clearest bright green emerald"/>
                 <name value="Blue-white diamond"/>
                 <name value="Canary diamond"/>

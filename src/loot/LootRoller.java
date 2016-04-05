@@ -2,6 +2,8 @@ package loot;
 
 import java.io.File;
 import java.nio.file.Paths;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -20,9 +22,9 @@ import util.CoinType;
 import util.DiceBag;
 import util.DiceRoll;
 public class LootRoller {
-	Table<Integer, Integer, PurseRoller> goldTable;
-	Table<Integer, Integer, GoodsRoller> goodsTable;
-//	Table<Integer, Integer, ItemRoller>  itemTable;
+	private Table<Integer, Integer, PurseRoller> goldTable;
+	private Table<GoodsType, Integer, GoodsRoller> goodsTable;
+//	private Table<Integer, Integer, ItemRoller>  itemTable;
 	
 	private static LootRoller instance = new LootRoller();
 	
@@ -93,13 +95,54 @@ public class LootRoller {
 	
 	public void parseGoods(Element goods) {
 		//TODO
+		GoodsRoller gr;
+		int upperRoll, numSides, numDice, modifier;
+		List<String> names;
+		Element currEntry;
+		NodeList nameList;
+		String tempName;
+		
+		goodsTable = HashBasedTable.create();
+		
+		NodeList gemEntries = ((Element)goods.getElementsByTagName("gems").item(0)).getElementsByTagName("gem");
+		for(int i=0; i<gemEntries.getLength(); i++) {
+			currEntry = (Element) gemEntries.item(i);
+			
+			upperRoll = Integer.parseInt(currEntry.getAttribute("upper_roll").trim());
+			numSides = Integer.parseInt(currEntry.getAttribute("num_sides").trim());
+			numDice = Integer.parseInt(currEntry.getAttribute("num_dice").trim());
+			modifier = Integer.parseInt(currEntry.getAttribute("modifier").trim());
+			
+			names = new LinkedList<String>();
+			nameList = currEntry.getElementsByTagName("name");
+			for(int j=0; j<nameList.getLength(); j++) {
+				tempName = nameList.item(j).getAttributes().getNamedItem("value").getTextContent().trim();
+				names.add(tempName);
+			}
+			
+			gr = new GoodsRoller(new DiceRoll(numSides, numDice), modifier, names);
+			goodsTable.put(GoodsType.GEM, upperRoll, gr);
+		}
+	}
+	
+	public Item rollGem() {
+		int roll = DiceBag.rollPercent();
+		Map<Integer, GoodsRoller> row = goodsTable.row(GoodsType.GEM);
+		
+		while( !row.containsKey(roll) && roll++ <= 100 );
+		GoodsRoller gr = goodsTable.get(GoodsType.GEM, roll);
+		
+		return gr.roll();
 	}
 	
 	public static void main (String args[]) {
 		CoinPurse purse = new CoinPurse();
+		Item item;
 		for(int i=0; i<10000; i++){
-			purse = instance.rollCoins(5);
-			System.out.println(purse);
+//			purse = instance.rollCoins(5);
+//			System.out.println(purse);
+			item = instance.rollGem();
+			System.out.println(item);
 		}
 	}
 }
