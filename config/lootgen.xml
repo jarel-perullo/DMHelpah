@@ -70,11 +70,6 @@
                 <name value="Bloodstone" />
                 <name value="Carnelian" />
                 <name value="Chalcedony" />
-                <name value="Coral" />
-                <name value="Red Garnet" />
-                <name value="Brown-green garnet" />
-                <name value="Jade" />
-                <name value="Jet" />
                 <name value="Iolite" />
                 <name value="Jasper" />
                 <name value="Moonstone" />
@@ -86,6 +81,53 @@
                 <name value="Rose quartz" />
                 <name value="Smokey quartz" />
                 <name value="Star rose quartz" />
+            </gem>
+            <gem upper_roll="70" val_num_sides="4" val_num_dice="4" val_modifier="10">
+                <name value="Amber"/>
+                <name value="Amethyst"/>
+                <name value="Chrysoberyl"/>
+                <name value="Coral"/>
+                <name value="Red garnet"/>
+                <name value="Brown-green garnet"/>
+                <name value="Jade"/>
+                <name value="Jet"/>
+                <name value="White pearl"/>
+                <name value="Golden pearl"/>
+                <name value="Pink pearl"/>
+                <name value="Silver pearl"/>
+                <name value="Red spinel"/>
+                <name value="Red-brown spinel"/>
+                <name value="Deep green spinel"/>
+                <name value="Tourmaline"/>
+            </gem>
+            <gem upper_roll="99" val_num_sides="4" val_num_dice="2" val_modifier="100">
+               <name value="Alexandrite"/>
+                <name value="Aquamarine"/>
+                <name value="Violet garnet"/>
+                <name value="Black pearl"/>
+                <name value="Deep blue spinel"/>
+                <name value="Golden yellow topaz"/>
+            </gem>
+            <gem upper_roll="99" val_num_sides="4" val_num_dice="4" val_modifier="100">
+                <name value="Emerald"/>
+                <name value="White opal"/>
+                <name value="Black opal"/>
+                <name value="Fire opal"/>
+                <name value="Blue sapphire"/>
+                <name value="Fiery yellow corundum"/>
+                <name value="Rich purple corundum"/>
+                <name value="Blue sapphire"/>
+                <name value="Black star sapphire"/>
+                <name value="Star ruby"/>
+            </gem>
+            <gem upper_roll="100" val_num_sides="4" val_num_dice="2" val_modifier="1000">
+                <name value="Clearest bright green emerald"/>
+                <name value="Blue-white diamond"/>
+                <name value="Canary diamond"/>
+                <name value="Pink diamond"/>
+                <name value="Brown diamond"/>
+                <name value="Blue diamond"/>
+                <name value="Jacinth"/>
             </gem>
         </gems>
     </goods>
