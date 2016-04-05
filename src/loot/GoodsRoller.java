@@ -8,10 +8,26 @@ import util.DiceRoll;
 
 public class GoodsRoller {
 	private DiceRoll roll;
+	private GoodsType type;
+	
+	public GoodsRoller(DiceRoll roll, GoodsType type) {
+		this.roll = roll;
+		this.type = type;
+	}
+	
+	public Item roll() {
+		//TODO
+		
+		return null;
+	}
+}
+
+class GemRoller {
+	private DiceRoll roll;
 	private int modifier;
 	private List<String> names;
 	
-	public GoodsRoller(DiceRoll roll, int modifier, List<String> names) {
+	public GemRoller(DiceRoll roll, int modifier, List<String> names) {
 		this.roll = roll;
 		this.modifier = modifier;
 		this.names = names;
