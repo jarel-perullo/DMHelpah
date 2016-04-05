@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<loot>
+    <coins>
+        <coin_entry level="1" upper_roll="14" num_sides="0" num_dice="0" modifier="0" coin_type="CP" />
+        <coin_entry level="1" upper_roll="29" num_sides="6" num_dice="1" modifier="1000" coin_type="CP" />
+        <coin_entry level="1" upper_roll="52" num_sides="8" num_dice="1" modifier="100" coin_type="SP" />
+        <coin_entry level="1" upper_roll="95" num_sides="8" num_dice="2" modifier="10" coin_type="GP" />
+        <coin_entry level="1" upper_roll="100" num_sides="4" num_dice="1" modifier="10" coin_type="PP" />
+        
+        <coin_entry level="2" upper_roll="13" num_sides="0" num_dice="0" modifier="0" coin_type="CP" />
+        <coin_entry level="2" upper_roll="23" num_sides="10" num_dice="1" modifier="1000" coin_type="CP" />
+        <coin_entry level="2" upper_roll="43" num_sides="10" num_dice="2" modifier="100" coin_type="SP" />
+        <coin_entry level="2" upper_roll="95" num_sides="10" num_dice="4" modifier="10" coin_type="GP" />
+        <coin_entry level="2" upper_roll="100" num_sides="8" num_dice="2" modifier="10" coin_type="PP" />
+        
+        <coin_entry level="3" upper_roll="11" num_sides="0" num_dice="0" modifier="0" coin_type="CP" />
+        <coin_entry level="3" upper_roll="21" num_sides="10" num_dice="2" modifier="1000" coin_type="CP" />
+        <coin_entry level="3" upper_roll="41" num_sides="10" num_dice="2" modifier="100" coin_type="SP" />
+        <coin_entry level="3" upper_roll="95" num_sides="4" num_dice="1" modifier="100" coin_type="GP" />
+        <coin_entry level="3" upper_roll="100" num_sides="10" num_dice="1" modifier="10" coin_type="PP" />
+        
+        <coin_entry level="4" upper_roll="11" num_sides="0" num_dice="0" modifier="0" coin_type="CP" />
+        <coin_entry level="4" upper_roll="21" num_sides="10" num_dice="3" modifier="1000" coin_type="CP" />
+        <coin_entry level="4" upper_roll="41" num_sides="12" num_dice="4" modifier="1000" coin_type="SP" />
+        <coin_entry level="4" upper_roll="95" num_sides="6" num_dice="1" modifier="100" coin_type="GP" />
+        <coin_entry level="4" upper_roll="100" num_sides="8" num_dice="1" modifier="10" coin_type="PP" />
+        
+        <coin_entry level="5" upper_roll="10" num_sides="0" num_dice="0" modifier="0" coin_type="CP" />
+        <coin_entry level="5" upper_roll="19" num_sides="4" num_dice="1" modifier="10000" coin_type="CP" />
+        <coin_entry level="5" upper_roll="38" num_sides="6" num_dice="1" modifier="1000" coin_type="SP" />
+        <coin_entry level="5" upper_roll="95" num_sides="8" num_dice="1" modifier="100" coin_type="GP" />
+        <coin_entry level="5" upper_roll="100" num_sides="10" num_dice="1" modifier="10" coin_type="PP" />
+    </coins>
+    <goods>
+        <goods_entry level="1" upper_roll="90" num_sides="0" num_dice="0" goods_type="GEM" />
+        <goods_entry level="1" upper_roll="95" num_sides="1" num_dice="1" goods_type="GEM" />
+        <goods_entry level="1" upper_roll="100" num_sides="1" num_dice="1" goods_type="ART" />
+        
+        <goods_entry level="2" upper_roll="81" num_sides="0" num_dice="0" goods_type="GEM" />
+        <goods_entry level="2" upper_roll="95" num_sides="3" num_dice="1" goods_type="GEM" />
+        <goods_entry level="2" upper_roll="100" num_sides="3" num_dice="1" goods_type="ART" />
+        
+        <goods_entry level="3" upper_roll="77" num_sides="0" num_dice="0" goods_type="GEM" />
+        <goods_entry level="3" upper_roll="95" num_sides="3" num_dice="1" goods_type="GEM" />
+        <goods_entry level="3" upper_roll="100" num_sides="3" num_dice="1" goods_type="ART" />
+        
+        <goods_entry level="4" upper_roll="70" num_sides="0" num_dice="0" goods_type="GEM" />
+        <goods_entry level="4" upper_roll="95" num_sides="4" num_dice="1" goods_type="GEM" />
+        <goods_entry level="4" upper_roll="100" num_sides="3" num_dice="1" goods_type="ART" />
+        
+        <goods_entry level="5" upper_roll="60" num_sides="0" num_dice="0" goods_type="GEM" />
+        <goods_entry level="5" upper_roll="95" num_sides="4" num_dice="1" goods_type="GEM" />
+        <goods_entry level="5" upper_roll="100" num_sides="4" num_dice="1" goods_type="ART" />
+        
+        <gems>
+            <gem upper_roll="25" val_num_sides="10" val_num_dice="1" val_modifier="10">
+                <name value="Banded agate" />
+                <name value="Eye agate" />
+                <name value="Moss agate" />
+                <name value="Blue quartz" />
+                <name value="Hermatite" />
+                <name value="Lapis lazul" />
+                <name value="Malachite" />
+                <name value="Obsidian" />
+                <name value="Rhodochrosite" />
+                <name value="Tiger eye turqoise" />
+                <name value="Freshwater (irregular) pearl" />
+            </gem>
+            <gem upper_roll="50" val_num_sides="4" val_num_dice="2" val_modifier="10">
+                <name value="Bloodstone" />
+                <name value="Carnelian" />
+                <name value="Chalcedony" />
+                <name value="Coral" />
+                <name value="Red Garnet" />
+                <name value="Brown-green garnet" />
+                <name value="Jade" />
+                <name value="Jet" />
+                <name value="Iolite" />
+                <name value="Jasper" />
+                <name value="Moonstone" />
+                <name value="Onyx" />
+                <name value="Peridot" />
+                <name value="Rock crystal (clear quartz)" />
+                <name value="Sard" />
+                <name value="Sardonyx" />
+                <name value="Rose quartz" />
+                <name value="Smokey quartz" />
+                <name value="Star rose quartz" />
+            </gem>
+        </gems>
+    </goods>
+    <items>
+    </items>
+</loot>
