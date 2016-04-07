@@ -67,7 +67,7 @@ public class LootRoller {
 		
 		goldTreasureTable = HashBasedTable.create();
 		
-		NodeList entries = coins.getElementsByTagName("coin_entry");
+		NodeList entries = coins.getElementsByTagName("treasure_coins");
 			
 		for(int i=0; i<entries.getLength(); i++) {
 			currEntry = (Element) entries.item(i);
@@ -95,7 +95,7 @@ public class LootRoller {
 		
 		// Populate Gem portion of treasure table
 		goodsTreasureTable = HashBasedTable.create();
-		NodeList gemEntries = goods.getElementsByTagName("goods_entry");
+		NodeList gemEntries = goods.getElementsByTagName("treasure_goods");
 		for(int i=0; i<gemEntries.getLength(); i++) {
 			currEntry = (Element) gemEntries.item(i);
 			level = Integer.parseInt(currEntry.getAttribute("level").trim());
@@ -109,20 +109,21 @@ public class LootRoller {
 		}
 		
 		// Populate Gem table
-		NodeList gems = ((Element)goods.getElementsByTagName("gems").item(0)).getElementsByTagName("gem");
-		for(int i = 0; i < gems.getLength(); i++) {
-			currEntry = (Element) gems.item(i);
+		NodeList goodsList = goods.getElementsByTagName("goods_entry");
+		for(int i = 0; i < goodsList.getLength(); i++) {
+			currEntry = (Element) goodsList.item(i);
 			upperRoll = Integer.parseInt(currEntry.getAttribute("upper_roll").trim());
 			numSides = Integer.parseInt(currEntry.getAttribute("num_sides").trim());
 			numDice = Integer.parseInt(currEntry.getAttribute("num_dice").trim());
 			modifier = Integer.parseInt(currEntry.getAttribute("modifier").trim());
+			goodsType = GoodsType.valueOf(currEntry.getAttribute("goods_type").trim());
 			
 			names = new LinkedList<String>();
 			nameList = currEntry.getElementsByTagName("name");
 			for(int j = 0; j < nameList.getLength(); j++) {
 				names.add(((Element)nameList.item(j)).getAttribute("value").trim());
 			}
-			GoodsRoller.addEntry(GoodsType.GEM, new DiceRoll(numSides, numDice), modifier, upperRoll, names);
+			GoodsRoller.addEntry(goodsType, new DiceRoll(numSides, numDice), modifier, upperRoll, names);
 		}
 		
 		
