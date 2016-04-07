@@ -18,7 +18,7 @@ public class CoinPurse {
 	}
 	
 	public CoinPurse(int gp) {
-		this(0,0,6,0);
+		this(0,gp,0,0);
 	}
 	
 	public int getCp() {

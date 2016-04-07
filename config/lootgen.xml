@@ -100,7 +100,7 @@
                 <name value="Deep green spinel"/>
                 <name value="Tourmaline"/>
             </gem>
-            <gem upper_roll="99" num_sides="4" num_dice="2" modifier="100">
+            <gem upper_roll="90" num_sides="4" num_dice="2" modifier="100">
                <name value="Alexandrite"/>
                 <name value="Aquamarine"/>
                 <name value="Violet garnet"/>
