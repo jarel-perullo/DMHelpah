@@ -7,7 +7,7 @@ public class DiceBag {
 		for(int i=0; i<numDice; i++) {
 			sum += (int)(Math.random()*numSides)+1;
 		}
-		return numSides == 0 ? 0 : sum;
+		return sum;
 	}
 	
 	public static int roll(DiceRoll roll) {
