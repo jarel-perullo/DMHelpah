@@ -185,8 +185,26 @@
             <name value="Gold and ruby ring"/>
             <name value="Gold cup set with emeralds"/>
         </goods_entry>
-        
     </goods>
     <items>
+        <treasure_items level="1" upper_roll="71" num_sides="0" num_dice="0" item_type="MUNDANE" />
+        <treasure_items level="1" upper_roll="95" num_sides="1" num_dice="1" item_type="MUNDANE" />
+        <treasure_items level="1" upper_roll="100" num_sides="1" num_dice="1" item_type="MINOR" />
+        
+        <treasure_items level="2" upper_roll="49" num_sides="0" num_dice="0" item_type="MUNDANE" />
+        <treasure_items level="2" upper_roll="85" num_sides="1" num_dice="1" item_type="MUNDANE" />
+        <treasure_items level="2" upper_roll="100" num_sides="1" num_dice="1" item_type="MINOR" />
+        
+        <treasure_items level="3" upper_roll="49" num_sides="0" num_dice="0" item_type="MUNDANE" />
+        <treasure_items level="3" upper_roll="79" num_sides="3" num_dice="1" item_type="MUNDANE" />
+        <treasure_items level="3" upper_roll="100" num_sides="1" num_dice="1" item_type="MINOR" />
+        
+        <treasure_items level="4" upper_roll="42" num_sides="0" num_dice="0" item_type="MUNDANE" />
+        <treasure_items level="4" upper_roll="62" num_sides="4" num_dice="1" item_type="MUNDANE" />
+        <treasure_items level="4" upper_roll="100" num_sides="1" num_dice="1" item_type="MINOR" />
+        
+        <treasure_items level="5" upper_roll="57" num_sides="0" num_dice="0" item_type="MUNDANE" />
+        <treasure_items level="5" upper_roll="67" num_sides="4" num_dice="1" item_type="MUNDANE" />
+        <treasure_items level="5" upper_roll="100" num_sides="3" num_dice="1" item_type="MINOR" />
     </items>
 </loot>
