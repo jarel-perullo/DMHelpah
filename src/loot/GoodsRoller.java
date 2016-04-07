@@ -29,12 +29,6 @@ public class GoodsRoller {
 		int rollVal;
 		Map<Integer, GoodsEntry> row = goodsTable.rowMap().get(type);
 		
-		//TODO remove "if" statement once ART objects are loaded
-		if(type==GoodsType.ART){
-			items.add(new Item("ART!", "TBD", new CoinPurse(999999)));
-			return items;
-		}
-		
 		for(int i = 0; i < numGoods; i++) {
 			rollVal = DiceBag.rollPercent();
 			while( !row.containsKey(rollVal) && rollVal++ <= 100 );

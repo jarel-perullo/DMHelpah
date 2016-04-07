@@ -125,9 +125,6 @@ public class LootRoller {
 			}
 			GoodsRoller.addEntry(goodsType, new DiceRoll(numSides, numDice), modifier, upperRoll, names);
 		}
-		
-		
-		//TODO repeat for Art
 	}
 	
 	public CoinPurse rollCoins(int level) {
@@ -165,7 +162,7 @@ public class LootRoller {
 		CoinPurse purse = new CoinPurse();
 		Item item;
 		
-		for(int i = 0; i < 100; i++)
-			System.out.println(instance.rollHoard(1));
+		for(int i = 0; i < 10000; i++)
+			System.out.println(instance.rollHoard(5));
 	}
 }

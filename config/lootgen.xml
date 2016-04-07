@@ -52,6 +52,7 @@
         <treasure_goods level="5" upper_roll="95" num_sides="4" num_dice="1" goods_type="GEM" />
         <treasure_goods level="5" upper_roll="100" num_sides="4" num_dice="1" goods_type="ART" />
         
+        <!-- GOODS - Gems -->
         <goods_entry upper_roll="25" num_sides="10" num_dice="1" modifier="10" goods_type="GEM">
             <name value="Banded agate" />
             <name value="Eye agate" />
@@ -128,6 +129,63 @@
             <name value="Blue diamond"/>
             <name value="Jacinth"/>
         </goods_entry>
+        
+        <!-- GOODS - Art -->
+        <goods_entry upper_roll="10" num_sides="10" num_dice="1" modifier="10" goods_type="ART">
+            <name value="Silver ewer"/>
+            <name value="carved bone statuette"/>
+            <name value="Ivory statuette"/>
+            <name value="Finely wrought small gold bracelet"/>
+        </goods_entry>
+        <goods_entry upper_roll="25" num_sides="6" num_dice="3" modifier="10" goods_type="ART">
+            <name value="Cloth of gold vestments"/>
+            <name value="Black velvet mask with numerous citrines"/>
+            <name value="Silver chalice with lapis lazuli gems"/>
+        </goods_entry>
+        <goods_entry upper_roll="40" num_sides="6" num_dice="1" modifier="100" goods_type="ART">
+            <name value="Large well-done wool tapestry"/>
+            <name value="Brass mug with jade inlays"/>
+        </goods_entry>
+        <goods_entry upper_roll="50" num_sides="10" num_dice="1" modifier="100" goods_type="ART">
+            <name value="Silver comb with moonstones"/>
+            <name value="Silver-plated steel longsword with jet jewel in hilt"/>
+        </goods_entry>
+        <goods_entry upper_roll="60" num_sides="6" num_dice="2" modifier="100" goods_type="ART">
+            <name value="Carved harp of exotic wood with ivory inlay and zircon gems"/>
+            <name value="Solid gold idol (10 lb.)"/>
+        </goods_entry>
+        <goods_entry upper_roll="70" num_sides="6" num_dice="3" modifier="100" goods_type="ART">
+            <name value="Gold dragon comb with red garnet eye"/>
+            <name value="Gold and topaz bottle stopper cork"/>
+            <name value="Ceremonial electrum dagger with a star ruby in the pommel"/>
+        </goods_entry>
+        <goods_entry upper_roll="80" num_sides="6" num_dice="4" modifier="100" goods_type="ART">
+            <name value="Eyepatch with mock eye of sapphire and moonstone"/>
+            <name value="Fire opal pendant on a fine gold chain"/>
+            <name value="Old masterpiece painting"/>
+        </goods_entry>
+        <goods_entry upper_roll="85" num_sides="6" num_dice="5" modifier="100" goods_type="ART">
+            <name value="Embroidered silk and velvet mantle with numerous moonstones"/>
+            <name value="Sapphire pendant on gold chain"/>
+        </goods_entry>
+        <goods_entry upper_roll="90" num_sides="4" num_dice="1" modifier="1000" goods_type="ART">
+            <name value="Embroidered and bejeweled glove"/>
+            <name value="Jeweled anklet"/>
+            <name value="Bold music box"/>
+        </goods_entry>
+        <goods_entry upper_roll="95" num_sides="6" num_dice="1" modifier="1000" goods_type="ART">
+            <name value="Golden circlet with four aquamarines"/>
+            <name value="A string of small pink pearls (necklace)"/>
+        </goods_entry>
+        <goods_entry upper_roll="99" num_sides="4" num_dice="2" modifier="1000" goods_type="ART">
+            <name value="Jeweled gold crown"/>
+            <name value="Jeweled electrum ring"/>
+        </goods_entry>
+        <goods_entry upper_roll="100" num_sides="6" num_dice="2" modifier="1000" goods_type="ART">
+            <name value="Gold and ruby ring"/>
+            <name value="Gold cup set with emeralds"/>
+        </goods_entry>
+        
     </goods>
     <items>
     </items>
