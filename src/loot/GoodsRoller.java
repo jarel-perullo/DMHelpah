@@ -22,27 +22,27 @@ public class GoodsRoller {
 		this.type = type;
 	}
 	
-	public Hoard roll() {
+	public List<Item> roll() {
 		GoodsEntry entry;
-		Hoard hoard = new Hoard();
+		List<Item> items = new LinkedList<Item>();
 		int numGoods = DiceBag.roll(roll);
 		int rollVal;
 		Map<Integer, GoodsEntry> row = goodsTable.rowMap().get(type);
 		
 		//TODO remove "if" statement once ART objects are loaded
 		if(type==GoodsType.ART){
-			hoard.add(new Item("ART!", "TBD", new CoinPurse(999999)));
-			return hoard;
+			items.add(new Item("ART!", "TBD", new CoinPurse(999999)));
+			return items;
 		}
 		
 		for(int i = 0; i < numGoods; i++) {
 			rollVal = DiceBag.rollPercent();
 			while( !row.containsKey(rollVal) && rollVal++ <= 100 );
 			entry = goodsTable.get(type, rollVal);
-			hoard.add(entry.roll());
+			items.add(entry.roll());
 		}
 		
-		return hoard;
+		return items;
 	}
 	
 	public static void addEntry(GoodsType type, DiceRoll roll, int modifier, int upperRoll, List<String> names) {

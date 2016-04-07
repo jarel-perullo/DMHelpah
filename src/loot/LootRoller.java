@@ -84,16 +84,6 @@ public class LootRoller {
 		}
 	}
 	
-	public CoinPurse rollCoins(int level) {
-		int roll = DiceBag.rollPercent();
-		Map<Integer, PurseRoller> row = goldTreasureTable.row(level);
-		
-		while( !row.containsKey(roll) && roll++ <= 100 );
-		PurseRoller pr = goldTreasureTable.get(level, roll);
-		
-		return pr.rollPurse();
-	}
-	
 	public void parseGoods(Element goods) {
 		GoodsRoller gr;
 		int level, upperRoll, numSides, numDice, modifier;
@@ -116,8 +106,6 @@ public class LootRoller {
 			
 			gr = new GoodsRoller(new DiceRoll(numSides, numDice),goodsType);
 			goodsTreasureTable.put(level, upperRoll, gr);
-//			System.out.println(level + "::" + goodsTreasureTable.get(level, upperRoll));
-			
 		}
 		
 		// Populate Gem table
@@ -141,33 +129,42 @@ public class LootRoller {
 		//TODO repeat for Art
 	}
 	
-	public Hoard rollGoods(int level) {
+	public CoinPurse rollCoins(int level) {
+		int roll = DiceBag.rollPercent();
+		Map<Integer, PurseRoller> row = goldTreasureTable.row(level);
+		while( !row.containsKey(roll) && roll++ <= 100 );
+		PurseRoller pr = goldTreasureTable.get(level, roll);
+		return pr.rollPurse();
+	}
+	
+	public List<Item> rollGoods(int level) {
 		int roll = DiceBag.rollPercent();
 		Map<Integer, GoodsRoller> row = goodsTreasureTable.row(level);
-//		System.out.println(roll);
 		while( !row.containsKey(roll) && roll++ <= 100 );
 		GoodsRoller gr = goodsTreasureTable.get(level, roll);
-//		System.out.println(roll);
-//		System.out.println(gr);
-		
 		return gr.roll();
+	}
+	
+	public List<Item> rollItems(int level){
+		//TODO
+		return null;
+	}
+	
+	public Hoard rollHoard(int level){
+		Hoard hoard = new Hoard();
+		
+		hoard.add(rollCoins(level));
+		hoard.add(rollGoods(level));
+		hoard.add(rollItems(level));
+		
+		return hoard;
 	}
 	
 	public static void main (String args[]) {
 		CoinPurse purse = new CoinPurse();
 		Item item;
-//		for(int i=0; i<10000; i++){
-//			purse = instance.rollCoins(5);
-//			System.out.println(purse);
-//			
-//			item = instance.rollGoods(1);
-//			System.out.println(item);
-//		}
 		
 		for(int i = 0; i < 100; i++)
-			System.out.println(instance.rollGoods(1));
-//		instance.goodsTreasureTable.cellSet().forEach(thing -> {
-//			System.out.println(thing);
-//		});
+			System.out.println(instance.rollHoard(1));
 	}
 }

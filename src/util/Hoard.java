@@ -29,7 +29,8 @@ public class Hoard {
 	}
 	
 	public void add(List<Item> items) {
-		this.items.addAll(items);
+		if(items != null)
+			this.items.addAll(items);
 	}
 	
 	public void add(Hoard h) {
